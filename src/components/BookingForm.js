@@ -9,6 +9,7 @@ const BookingForm = (props) => {
    const [guests, setGuests] = useState("");
    const [date, setDate] = useState("");
    const [times, setTimes] = useState("")
+   const [seating, setSeating] = useState("")
 
    const handleSumbit = (e) => {
    e.preventDefault();
@@ -25,7 +26,7 @@ const BookingForm = (props) => {
       <section>
         <form onSubmit={handleSumbit}>
           <fieldset className="formField">
-            <div>
+            <div className="">
               <label htmlFor="book-date">Date:*</label>
               <input id="book-date" value={date} onChange={(e) => handleChange(e.target.value)} type="date" required/>
             </div>
@@ -46,8 +47,19 @@ const BookingForm = (props) => {
                 <option value="">Select an Option</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
-                <option>Anniversary</option>
+                <option>Engagement</option>
               </select>
+            </div>
+            <div>
+            <div >Select a Seating Option</div>
+              <input type="radio" id="indoor" key={seating} value={seating} onChange={(e) => setSeating(e.target.value)}>
+              </input>
+              <label htmlFor="indoor">Indoor:</label>
+
+              <input type="radio" id="outdoor" key={seating} value={seating} onChange={(e) => setSeating(e.target.value)}>
+              </input>
+              <label htmlFor="outdoor">Outdoor</label>
+
             </div>
             <div className="btnReceive">
               <input aria-label="On Click" type={"submit"} value={"Make Your Reservation"}></input>
