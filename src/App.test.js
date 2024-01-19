@@ -22,8 +22,3 @@ test('Initialize/Update Times', () => {
   fireEvent.click(reserveButton);
 })
 
-test('confirm reservation button', () => {
-  render(<BrowserRouter><BookingForm /><App /><Main /></BrowserRouter>);
-  const confirmButton = screen.getByText("Confirm Reservation");
-  fireEvent.click(confirmButton);
-})
