@@ -2,10 +2,11 @@ import React from "react";
 
 const ConfirmedBooking = () => {
     return(
-        <div className="comfirm">
+        <div className="confirmed">
             <div>
-            <h1>Booking has been <span>confirmed!</span>
-        </h1>
+            <p>Yay, <br/>Your booking has been </p>
+                <h1>confirmed!</h1>
+            <p>You should receive the confirmation email <br/>shortly.</p>
             </div>
         </div>
 
