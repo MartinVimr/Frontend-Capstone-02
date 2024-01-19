@@ -131,7 +131,7 @@ const BookingForm = (props) => {
               <input
                 aria-label="On Click"
                 type={"submit"}
-                value={"Make Your Reservation"}
+                value={"Confirm Reservation"}
               ></input>
             </div>
           </fieldset>
@@ -173,6 +173,7 @@ const styles = {
 const CustomRadioButton = ({ label, selected, onSelect }) => (
   <li>
     <button
+	type="button"
       style={{
         ...styles.radioButton,
         ...(selected ? styles.selected : {}),
